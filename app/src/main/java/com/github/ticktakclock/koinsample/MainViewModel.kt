@@ -21,7 +21,7 @@ class MainViewModel(private val calculateService: CalculateService) : ViewModel(
     fun calculate(a: String?, b: String?) {
         val numA = if (a.isNullOrEmpty()) 0 else a.toInt()
         val numB = if (b.isNullOrEmpty()) 0 else b.toInt()
-        val result = calculateService.add(numA, numB).toString()
+        val result = calculateService.sum(numA, numB).toString()
         _result.value = result
     }
 }
